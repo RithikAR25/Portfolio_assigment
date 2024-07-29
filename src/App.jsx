@@ -6,7 +6,6 @@ import Section_Contact from "./Pages/Section_Contact";
 import Section_Project from "./Pages/Section_Project";
 import Section_Skills from "./Pages/Section_Skills";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Main_Footer from "./Components/Footer/Main_Footer";
 
 
 
@@ -23,7 +22,6 @@ function App() {
           <Route path="/Contact" element={ <Section_Contact/>} />
         </Routes>
         <Footer/>
-        <Main_Footer/>
       </Router>
 
 
