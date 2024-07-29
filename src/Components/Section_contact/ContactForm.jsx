@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React from 'react';
+import React, { useRef } from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import styles from './ContactForm.module.css';
@@ -8,6 +8,8 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const ContactForm = () => {
+  const formRef = useRef(null);
+
   const formik = useFormik({
     initialValues: {
       from_name: '',
@@ -27,9 +29,7 @@ const ContactForm = () => {
     }),
     onSubmit: (values, { resetForm }) => {
       emailjs
-        .sendForm('service_4j13xbs', 'template_yliq0eq', formik.formRef.current, {
-          publicKey: 'qX9EealRbBN_hm_1s',
-        })
+        .sendForm('service_4j13xbs', 'template_yliq0eq', formRef.current, 'qX9EealRbBN_hm_1s')
         .then(
           () => {
             toast.success('Email sent successfully!', {
@@ -49,7 +49,7 @@ const ContactForm = () => {
   return (
     <>
       <div className={styles.form_box}>
-        <form ref={formik.formRef} onSubmit={formik.handleSubmit}>
+        <form ref={formRef} onSubmit={formik.handleSubmit}>
           <label>Name :</label><br />
           <input
             className={styles.input}
