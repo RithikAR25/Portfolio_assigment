@@ -1,0 +1,155 @@
+.Container {
+    height: 20vh;
+    width: 100%;
+}
+
+.footer {
+    position: relative;
+    margin-top: 300px;
+
+    color: #fff;
+    background: #000;
+    margin-top: auto;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+@keyframes parralax {
+    0% {
+        background-position: 260px;
+    }
+
+    100% {
+        background-position: -10000vw;
+    }
+}
+
+@keyframes moto {
+    0% {
+        transform: translateY(0) rotate(0);
+    }
+
+    5% {
+        transform: translateY(0) rotate(-5deg);
+    }
+
+    25% {
+        transform: translateY(60px) rotate(-20deg);
+    }
+
+    49% {
+        transform: translateY(0) rotate(-1deg);
+    }
+
+    51% {
+        transform: translateY(0) rotate(1deg);
+    }
+
+    75% {
+        transform: translateY(60px) rotate(20deg);
+    }
+
+    80% {
+        transform: translateY(60px) rotate(0deg);
+    }
+
+    98% {
+        transform: translateY(0) rotate(0);
+    }
+}
+
+@keyframes voiture {
+    0% {
+        transform: rotate(0);
+    }
+
+    25% {
+        transform: rotate(-5deg);
+    }
+
+    50% {
+        transform: rotate(0);
+    }
+
+    75% {
+        transform: rotate(5deg);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
+}
+
+.footer__parralax {
+    position: absolute;
+    left: 0;
+    top: -300px;
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.footer__parralax_premierplan {
+    background-position: 260px;
+    background-repeat: repeat-x;
+    animation: parralax 600s linear infinite;
+}
+
+.footer__parralax_trees,
+.footer__parralax_premierplan,
+.footer__parralax_secondplan {
+    position: absolute;
+    inset: 0;
+    background-position-y: 100% !important;
+    background-repeat: repeat-x;
+    animation: parralax 600s linear infinite;
+}
+
+.footer__parralax_moto {
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    margin-left: -250px;
+    height: 200px;
+    width: 150px;
+    background: url(https://i.ibb.co/JCGfFJd/moto-net.gif);
+    background-repeat: no-repeat;
+    transform-origin: 50% 80%;
+    animation: moto 5s linear infinite;
+}
+
+.footer__parralax_voiture {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    margin-left: 250px;
+    height: 114px;
+    width: 206px;
+    background: url(https://i.ibb.co/0Qhp4DN/voiture-fumee.gif);
+    background-repeat: no-repeat;
+    animation: voiture 1s linear infinite;
+}
+
+.footer__parralax_trees {
+    background-image: url(https://i.ibb.co/nQM4PGJ/arbres.png);
+    bottom: -60px;
+    animation-duration: 1000s;
+}
+
+.footer__parralax_premierplan {
+    background-image: url(https://i.ibb.co/RQhDWbk/premierplanv3.png);
+    animation-duration: 500s;
+}
+
+.footer__parralax_secondplan {
+    background-image: url(https://i.ibb.co/J3TjC4W/second-plan.png);
+    animation-duration: 600s;
+}
+
+.scrollToTopButton {
+    font-size: clamp(20px, 2.5vw + 1px, 40px);
+    /* font-size: 40px; */
+}

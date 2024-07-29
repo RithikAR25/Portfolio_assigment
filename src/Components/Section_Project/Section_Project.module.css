@@ -1,0 +1,79 @@
+.Section_Project {
+    width: 100%;
+    height: 100vh;
+    padding: 10vh 0px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+
+}
+
+.Section_Project h1 {
+    font-family: "EB Garamond", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: clamp(25px, 5vw + 5px, 50px);
+    /* font-size: 50px; */
+    padding: 5vh 0vw 0vw 0vw;
+    height: 20%;
+}
+
+.Card_div {
+    width: 90%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2.3vw;
+    overflow-x: auto;
+    padding: 0vh 2vw 0vw 2vw;
+
+
+
+
+    /* Hide horizontal overflow */
+    /* Position relative for arrow placement */
+}
+
+
+.Arrow1 {
+    position: absolute;
+    left: .5%;
+    cursor: pointer;
+    width: 4vw;
+    height: 4vw;
+    z-index: 1;
+}
+
+.Arrow1 img {
+    width: 4vw;
+    height: 4vw;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.Arrow2 {
+    position: absolute;
+    right: .5%;
+    cursor: pointer;
+    width: 4vw;
+    height: 4vw;
+    z-index: 1;
+}
+
+.Arrow2 img {
+    width: 4vw;
+    height: 4vw;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.Arrow1 img:hover {
+    transform: scale(1.3);
+}
+
+.Arrow2 img:hover {
+    transform: scale(1.3);
+}

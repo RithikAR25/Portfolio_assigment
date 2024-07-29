@@ -1,0 +1,145 @@
+.Section1 {
+    width: 100%;
+    height: 100vh;
+    padding: 10vh 0px 0px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: white;
+}
+
+/* Section1.module.css */
+
+/* Other existing styles */
+
+.container1 {
+    /* Initial state */
+    transform: translateX(-100%) perspective(600px) rotateY(180deg);
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.container1.rollFromLeft {
+    /* Animation will be applied here */
+    animation: rollFromLeft 1.5s forwards;
+}
+
+@keyframes rollFromLeft {
+    from {
+        transform: translateX(-10%) perspective(600px) rotateY(90deg);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0) perspective(600px) rotateY(0deg);
+        opacity: 1;
+    }
+}
+
+
+.container2 {
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+.container2.visible {
+    opacity: 1;
+}
+
+.container1 {
+    display: flex;
+    width: 45%;
+    height: 80vh;
+    background-color: rgb(255, 255, 255);
+    padding: 15vh 0px 0px 0px;
+    justify-content: center;
+}
+
+.container1 img {
+    width: 30vw;
+    height: 30vw;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+
+
+
+}
+
+.container2 {
+    width: 45%;
+    height: 80vh;
+    padding: 10vh 0px 0px 0px;
+
+}
+
+.container2 h1 {
+    font-family: "Finger Paint", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: clamp(16px, 3.4vw + 5px, 50px);
+    /* font-size: 16px; */
+}
+
+.container2 p {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: clamp(12px, 1.3vw + 1px, 35px);
+    /* font-size: 35px; */
+    padding: 0vh 3vw 0px 0px;
+}
+
+.downloadCv {
+    margin-top: 5vh;
+    background: #252525;
+    cursor: pointer;
+    line-height: 1;
+    padding: 1em 1.5em;
+    border-style: hidden;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.downloadCv:hover {
+    background: #1DA1F2;
+    /* Change background color on hover */
+    transform: scale(1.05);
+    /* Added scale transform for hover */
+}
+
+.downloadCv a {
+    color: white;
+    text-decoration: none;
+}
+
+
+@media only screen and (max-width: 426px) {
+    .Section1 {
+        flex-direction: column;
+        height: auto;
+        padding: 0%;
+        align-items: center;
+    }
+
+    .container2 {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0vh 0px 10px 0px;
+        height: auto;
+    }
+
+    .container1 {
+        width: 90%;
+        height: 80vw;
+        padding: 5vh 0px 0px 0px;
+    }
+
+    .container1 img {
+        width: 65vw;
+        height: 65vw;
+    }
+}

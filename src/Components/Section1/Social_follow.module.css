@@ -1,0 +1,76 @@
+.Follow {
+    display: flex;
+    align-items: center;
+    padding: 2vh 0px 0px 0px;
+}
+
+.Follow p {
+    /* font-size: clamp(16px, 3.4vw + 1px, 50px); */
+    font-size: 1.5vw;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+
+}
+
+
+.socialList {
+    list-style-type: none;
+    /* Removes bullet points */
+    padding: 0;
+    /* Removes padding */
+    margin: 0;
+    /* Removes margin */
+    display: flex;
+    gap: 2vw;
+    /* Aligns items in a row */
+}
+
+.socialList li {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 4.5vw;
+    height: 2.5vw;
+    border-radius: 50px;
+    background-color: rgb(233, 233, 233);
+}
+
+
+
+
+.socialList img, a {
+    margin: 0;
+    padding: 0;
+    width: 2.5vw;
+    height: 2.5vw;
+}
+
+#a1, #a2, #a3, #a4, #a5 {
+    transition: background-color 1.3s ease;
+
+}
+
+#a1:hover {
+    background-color: #981b66;
+}
+
+#a2:hover {
+    background-color: #1DA1F2;
+
+}
+
+#a3:hover {
+    background-color: #fffc00;
+}
+
+#a4:hover {
+    background-color: #0077B5;
+}
+
+#a5:hover {
+    background-color: #BD081C;
+}

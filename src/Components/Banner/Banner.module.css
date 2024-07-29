@@ -1,0 +1,11 @@
+.banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20vh;
+    width: 100%;
+    height: 100vh;
+    background-image: url("C:\Users\rithik.a\Desktop\Portfolio_react\Portfolio_react\src\assets\image\MicrosoftTeams-image.png");
+    background-size: cover;
+    background-position: center;
+}
